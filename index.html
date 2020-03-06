@@ -1,11 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <title>My First App</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TWA to APK</title>
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">  
 </head>
+
 <body>
-  <h1>This is a test Example</h1>
+  <h1>TWA to APK and publish to Google Play</h1>
 </body>
+
 </html>
+
+<script>
+  if (navigator.serviceWorker) {
+    navigator.serviceWorker
+      .register('./sw.js')
+      .then(registration => {
+        console.log(registration);
+      })
+      .catch(console.error)
+  }
+</script>
